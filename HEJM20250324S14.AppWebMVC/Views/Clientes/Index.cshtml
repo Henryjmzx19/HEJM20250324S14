@@ -20,14 +20,25 @@
         <div class="form-group col-3">
             <label asp-for="@modelBuscar.Telefono" class="control-label"></label>
             <input name="telefono" class="form-control" />
-
         </div>
 
         <div class="form-group col-4">
             <label asp-for="@modelBuscar.Email" class="control-label"></label>
             <input name="email" class="form-control" />
 
-
+        </div>
+        <div class="row">
+            <div class="form-group col-1">
+            <label>Cant. Reg</label>
+            <select name="topRegistro" class="control-control">
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+                <option value="200">200</option>
+                <option value="0">Todos</option>
+            </select>
+            </div>
         </div>
     </div>
     <br />
@@ -47,7 +58,7 @@
 
 </form>
 
-<table class="table">
+<table class="table" id="myTable">
     <thead>
         <tr>
             <th>
@@ -100,3 +111,14 @@
         }
     </tbody>
 </table>
+@section Scripts {
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                 "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.16/i18n/Spanish.json"
+                }
+            });           
+        });
+    </script>
+}
