@@ -1,7 +1,7 @@
-CREATE DATABASE ClientesDB;
+CREATE DATABASE ClientesDB2;
 GO
 
-USE ClientesDB;
+USE ClientesDB2;
 GO
 
 CREATE TABLE Clientes (
